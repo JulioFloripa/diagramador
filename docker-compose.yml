@@ -1,0 +1,9 @@
+services:
+  diagramador:
+    build: .
+    container_name: diagramador-fleming
+    restart: unless-stopped
+    ports:
+      - "5050:5050"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
